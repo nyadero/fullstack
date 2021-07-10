@@ -1,0 +1,109 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    text-align: center;
+}
+.header span{
+    color: gold;
+}
+.header-title{
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    color: steelblue;
+}
+.searchbar{
+    width: 100%;
+    padding: .6rem;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.searchbox{
+    width: 100%;
+    padding: .5rem;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: .5rem;
+}
+.searchbar .searchbox:last-child{
+    margin-right: 0;
+}
+.input-box{
+    width: 100%;
+    padding: .5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: #f3f3f3;
+}
+.input-box option value{
+     font-size: 1rem;
+      font-family: 'Raleway', sans-serif;
+}
+.icons{
+    margin-right: .5rem;
+    font-size: 1.3rem;
+    color: tomato;
+}
+.search-btn{
+    padding: .5rem;
+}
+
+.job-board{
+    display: grid;
+    grid-template-columns:300px 1fr;
+    grid-gap: 10px;
+    margin-top: 1.5rem;
+}
+.sidebar{
+    background: #fff;
+    padding: .8rem;
+    border-radius: 10px;
+    height: fit-content;
+}
+.sidebar hr{
+    margin-bottom: .5rem;
+}
+.jobtype h2{
+    font-size: 1.1rem;
+    font-family: 'Raleway', sans-serif;
+}
+.category{
+    display: flex;
+    align-items: center;
+    padding: .5rem 0;
+}
+.category h3{
+    margin-left: .6rem;
+   font-size: 1rem;
+    font-family: 'Raleway', sans-serif; 
+    color: #222;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.main-board{
+    min-height: 100vh;
+}
+.job{
+    margin-bottom: 1rem;
+}
+.location h3{
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 650px) {
+    .job-board{
+        display: flex;
+        flex-direction: column;
+    }
+    .searchbar{
+        flex-direction: column;
+    }
+}

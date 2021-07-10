@@ -1,0 +1,118 @@
+.intro{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../../assets/bgmain.jpg');
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+}
+.intro h1{
+    font-size: 1.3rem;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: .5rem;
+    color: tomato;
+}
+.intro p{
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+.jobs{
+    margin-top: .5rem;
+    padding: .5rem;
+    background: #f3f3f3;
+}
+.jobs-intro, .jobs-link{
+    display: flex;
+    justify-content: space-between;
+}
+.main-jobs-section{
+    min-height: 50vh;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: .5rem 0;
+}
+.job{
+    background: #ffff;
+    padding: .6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 250px;
+    position: relative;
+}
+.job:hover{
+    border: 1px solid tomato;
+}
+.job-intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.promoter h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.title h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color:blue;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.description p{
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+}
+.type, .location, .qualification{
+    background: gainsboro;
+    border-radius: 8px;
+    padding: .3rem .8rem;
+}
+.type h3, .location h3, .qualification h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000;
+    margin-left: .3rem;
+}
+.icon{
+    font-size: 1rem;
+    color: royalblue;
+}
+.arrow-icon{
+    font-size: 1.5rem;
+    color: blue;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.footer-intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-intro div:last-child{
+    margin-left: .8rem;
+}
+.location, .qualification{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.job-link{
+    text-decoration: none;
+    color: #333;
+}

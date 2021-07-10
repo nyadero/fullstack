@@ -1,0 +1,128 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  position: relative;
+  z-index: 100;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.myLogo {
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  color: #222;
+}
+.toggle-menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  display: none;
+}
+.toggle-menu:hover {
+  transform: rotate(90deg);
+}
+.mainbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.links {
+  display: flex;
+  justify-content: justify;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+.links ul {
+  display: inline;
+}
+.links ul li {
+  list-style-type: none;
+}
+.link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Raleway", "Times New Roman", Times, serif;
+  margin: 1rem;
+  color: #222;
+}
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account button {
+  padding: 0.3rem 0.9rem;
+  cursor: pointer;
+  border: 1px solid #444;
+  outline: none;
+  border-radius: 5px;
+}
+.account button:last-child {
+  margin-left: 1.5rem;
+}
+.account button .account-link {
+  text-decoration: none;
+  color: #222;
+  font-size: 0.8rem;
+  font-family: "Raleway", "Times New Roman", Times, serif;
+}
+
+/* mobile responsive */
+@media screen and (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+  }
+  .logo {
+    width: 100%;
+  }
+  .toggle-menu {
+    display: block;
+  }
+  .mainbar {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: left;
+    position: absolute;
+    top: 2.6rem;
+    left: -110%;
+    padding: 1rem 0;
+    background: #f1f1f1;
+    transition: all 0.3s linear;
+  }
+  .active {
+    position: absolute;
+    width: 100%;
+    background: #f1f1f1;
+    height: 100vh;
+    left: 0;
+    transition: all 0.3s linear;
+    top: 2.6rem;
+  }
+  .links {
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    padding: 0;
+  }
+  .links ul {
+    display: block;
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  .links ul li {
+    text-align: justify;
+    width: 100%;
+  }
+  .account {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

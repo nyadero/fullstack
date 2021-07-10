@@ -1,0 +1,63 @@
+.postjob-page{
+    background: #fff;
+    padding: .8rem;
+    border-radius: 8px;
+}
+.form-control label{
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+}
+.flex-input{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-input .form-control{
+    width: 100%;
+}
+.flex-input .form-control:last-child{
+    margin-left: .5rem;
+}
+.form-control input{
+    background: #f6f7f9f0;
+}
+.form-control select{
+    background: #f6f7f9f0;
+    padding: .5rem;
+    border: 1px solid #333;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: 'Raleway', sans-serif;
+}
+.form-control textarea{
+    background: #f6f7f9f0;
+    border-radius: 8px;
+    border: 1px solid #333;
+    outline: none;
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+.post-btn{
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    border: 1px solid #333;
+    outline: none;
+    border-radius: 5px;
+    background: skyblue;
+    color: #fff;
+}
+
+@media screen and (max-width: 650px) {
+    .postjob-page{
+        padding: 0;
+    }
+    .flex-input{
+        flex-direction: column;
+    }
+    .flex-input .form-control:last-child{
+    margin: 0;
+    }
+}

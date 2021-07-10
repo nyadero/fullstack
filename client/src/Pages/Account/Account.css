@@ -1,0 +1,59 @@
+.myAccount{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-gap: 10px;
+}
+.user-details{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 3rem .5rem;
+    background: #fff;
+    border-radius: 10px;
+}
+.quick-action hr{
+    width: 100%;
+    margin-bottom: .5rem;
+}
+.quick-action{
+    width: 100%;
+    padding: .5rem;
+    position: absolute;
+    bottom: 0;
+}
+.buttons{
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logout-btn, .dashboard-btn{
+    padding: .5rem 1rem;
+    border: 1px solid #888;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.dashboard-btn{
+    background: cadetblue;
+}
+.dashboard-btn a{
+   text-decoration: none;
+   color: #fff;
+}
+.update-account{
+    background: #fff;
+    border-radius: 10px;
+    padding: .5rem;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 650px){
+    .myAccount{
+        display: flex;
+        flex-direction: column;
+    }
+}

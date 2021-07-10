@@ -1,0 +1,125 @@
+.job-details{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-gap: 8px;
+    margin-top: .7rem;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+    text-align: left;
+}
+.header h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: .5rem;
+    white-space: wrap;
+}
+.properties{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: auto;
+}
+.job-location, .job-type, .job-qualification{
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem 1rem;
+    align-items: center;
+    margin-right: .5rem;
+}
+.job-location h3, .job-type h3, .job-qualification h3{
+   font-family: 'Raleway', sans-serif;
+   font-size: 1.1rem;
+   text-transform: capitalize;
+   margin-left: .3rem;
+}
+.job-type{
+    background: lightgreen;
+    border-radius: 10px;
+}
+.job-qualification{
+    background: lightskyblue;
+    border-radius: 10px;
+}
+.job-description{
+    /* width: 100%; */
+    min-height: 50vh;
+    background: #fff;
+    border-radius: 10px;
+    padding: .5rem;
+    position: relative;
+}
+.job-description p{
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.job-description .footer{
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.apply-button{
+    width: 100%;
+    padding: .7rem 0;
+    font-size: 1rem;
+    color: #fff;
+    background: darkblue;
+    border: 1px solid #888;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: .5rem;
+}
+.share{
+    display: flex;
+    align-items: center;
+}
+.share h3{
+    margin-left: .5rem;
+    font-size: 1rem;
+}
+.share-link{
+    cursor: pointer;
+    margin: 0 .5rem;
+    color: #555;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+.share-link:hover{
+    color: blue;
+}
+.promoters-details{
+    background: #fff;
+    border-radius: 10px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.related{
+    margin-top: 2rem;
+}
+.related h1{
+    font-size: 1.5rem;
+}
+/* mobile responsive */
+@media screen and (max-width:650px) {
+    .job-details{
+        display: flex;
+        flex-direction: column;
+    }
+}
