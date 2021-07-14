@@ -17,5 +17,10 @@ router.get('/job/:id', jobsController.singleJob);
 // find all jobs where the promoter is the same
 router.get('/related/:userName', jobsController.filterJobs);
 
+// find jobs with keyword search query
+router.get('/search', jobsController.searchJobs);
+
+// find jobs with location
+router.get('/search/location', jobsController.location);
 
 module.exports = router;

@@ -20,8 +20,6 @@ function Postajob() {
       history.push('/');
     }
   };
-
-  
     return (
       <div className="postjob-page">
         <h2>{ alert }</h2>

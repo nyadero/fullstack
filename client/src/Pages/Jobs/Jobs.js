@@ -9,14 +9,44 @@ function Jobs() {
     let history = useHistory();
   const[alljobs, setAllJobs] = useState([]);
   const [locations, setLocations] = useState([]);
+  const [searchedJobs, setSearchedJobs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   // get all jobs
   const getAllJobs = async () => {
     const response = await axios.get("/jobs").catch((err) => console.log(err));
     if (response && response.data) {
         setAllJobs(response.data);
-        setLocations(response.data);
+      setLocations(response.data);
+      console.log(response.data);
     }
+  };
+
+  // get jobs by keyword or promoters name
+  const queriedJobs = async (e) => {
+    e.preventDefault();
+    const response = await axios.get('/jobs/search', { params: { searchTerm } })
+      .catch((err) => console.log(err));
+    if (response && response.data) {
+      setSearchedJobs(response.data);
+      setAllJobs(response.data);
+      setSearchTerm("");
+      console.log(response.data);
+    }
+  };
+
+  // get jobs by location
+  const JobsByLocation = async () => {
+    const response = await axios.get('/jobs/search/location', { params: { searchTerm } })
+      .catch((err) => console.log(err));
+    if (response && response.data) {
+      setAllJobs(response.data);
+      console.log(response.data);
+    }
+  };
+
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
   };
 
   useEffect(() => {
@@ -31,21 +61,31 @@ function Jobs() {
         </h2>
       </div>
       <div className="searchbar">
-        <div className="searchbox">
-          <FaSearch className="icons" />
-          <input
-            type="search"
-            name="search"
-            placeholder="Title, Company or Keyword"
-            className="input-box"
-          />
-          <button className="search-btn">Search</button>
-              </div>
-              
-              <div className="searchbox">
-          <LocationFilter setAllJobs={ setAllJobs } alljobs={ alljobs } locations={ locations } setLocations={ setLocations}/>
-              </div>
-              
+        <form className="search" method="get" action="/jobs/search">
+          <div className="searchbox">
+            <FaSearch className="icons" />
+            <input
+              type="search"
+              name="search"
+              placeholder="Title, Company or Keyword"
+              className="input-box"
+              onChange={ handleChange }
+            />
+            <button type="submit" className="search-btn" onClick={queriedJobs}>
+              Search
+            </button>
+          </div>
+        </form>
+
+        <form action="" method="get" className="search">
+          <div className="searchbox">
+            <LocationFilter
+              handleSelection={handleChange}
+              JobsByLocation={JobsByLocation}
+            />
+          </div>
+        </form>
+
         <div className="searchbox">
           <FaUser className="icons" />
           <select name="category" id="" className="input-box">
@@ -125,6 +165,7 @@ function Jobs() {
         </div>
         <div className="main-board">
           {alljobs.map((job) => {
+            <h2>alljobs.length()</h2>;
             const {
               id,
               job_title,
